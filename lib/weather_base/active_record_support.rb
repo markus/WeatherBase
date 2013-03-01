@@ -5,16 +5,16 @@ module WeatherBase
     
     def self.included(base)
       base.extend(ClassMethods)
-      base.serialize :high_temp_f, Array
-      base.serialize :high_temp_c, Array
-      base.serialize :low_temp_f, Array
-      base.serialize :low_temp_c, Array
-      base.serialize :days_above_85f, Array
-      base.serialize :days_below_70f, Array
-      base.serialize :precip_inches, Array
-      base.serialize :precip_cm, Array
-      base.serialize :snowfall_inches, Array
-      base.serialize :snowfall_cm, Array
+      base.serialize :high_temp_f
+      base.serialize :high_temp_c
+      base.serialize :low_temp_f
+      base.serialize :low_temp_c
+      base.serialize :days_above_85f
+      base.serialize :days_below_70f
+      base.serialize :precip_inches
+      base.serialize :precip_cm
+      base.serialize :snowfall_inches
+      base.serialize :snowfall_cm
       base.acts_as_mappable(:units => :km)
     end
 
